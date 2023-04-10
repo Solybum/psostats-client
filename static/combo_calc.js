@@ -861,18 +861,18 @@ const barriers = {
     "Black Ring (3)": {atp: 150, ata: 0},
 }
 const classStats = {
-    HUmar: {animation: "male",              maxAtp: 1397,   minAtp: 1392, ata: 200},
-    HUnewearl: {animation: "female",        maxAtp: 1237,   minAtp: 1232, ata: 199},
-    HUcast: {animation: "male",             maxAtp: 1639,   minAtp: 1634, ata: 191},
-    HUcaseal: {animation: "female",         maxAtp: 1301,   minAtp: 1296, ata: 218},
-    RAmar: {animation: "male",              maxAtp: 1260,   minAtp: 1256, ata: 249},
-    RAmarl: {animation: "female",           maxAtp: 1145,   minAtp: 1141, ata: 241},
-    RAcast: {animation: "male",             maxAtp: 1350,   minAtp: 1346, ata: 224},
-    RAcaseal: {animation: "female",         maxAtp: 1175,   minAtp: 1171, ata: 231},
-    FOmar: {animation: "male",              maxAtp: 1002,   minAtp: 1000, ata: 163},
-    FOmarl: {animation: "female",           maxAtp: 872,    minAtp: 870, ata: 170},
-    FOnewm: {animation: "male",             maxAtp: 814,    minAtp: 812, ata: 180},
-    FOnewearl: {animation: "female",        maxAtp: 583,    minAtp: 581, ata: 186}
+    HUmar: {animation: "male",              maxAtp: 1497,   minAtp: 1492, ata: 210},
+    HUnewearl: {animation: "female",        maxAtp: 1337,   minAtp: 1332, ata: 209},
+    HUcast: {animation: "male",             maxAtp: 1739,   minAtp: 1734, ata: 201},
+    HUcaseal: {animation: "female",         maxAtp: 1401,   minAtp: 1396, ata: 228},
+    RAmar: {animation: "male",              maxAtp: 1360,   minAtp: 1356, ata: 259},
+    RAmarl: {animation: "female",           maxAtp: 1245,   minAtp: 1241, ata: 251},
+    RAcast: {animation: "male",             maxAtp: 1450,   minAtp: 1446, ata: 234},
+    RAcaseal: {animation: "female",         maxAtp: 1275,   minAtp: 1271, ata: 241},
+    FOmar: {animation: "male",              maxAtp: 1102,   minAtp: 1100, ata: 173},
+    FOmarl: {animation: "female",           maxAtp: 972,    minAtp: 970, ata: 180},
+    FOnewm: {animation: "male",             maxAtp: 914,    minAtp: 912, ata: 190},
+    FOnewearl: {animation: "female",        maxAtp: 683,    minAtp: 681, ata: 196}
 };
 const frames = {
     NONE: {atp: 0, ata: 0},
