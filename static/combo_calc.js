@@ -548,11 +548,11 @@ const weapons = {
     "Serene Swan": {
         name: "Serene Swan",
         animation: "Handgun",
-        minAtp: 80,
-        maxAtp: 90,
-        ata: 32,
-        grind: 9,
-        maxHit: 0,
+        minAtp: 5,
+        maxAtp: 15,
+        ata: 37,
+        grind: 80,
+        maxHit: 100,
         combo: {"attack1Hits": 4, "attack2Hits": 4, "attack3Hits": 4}
     },
     "Heaven Striker": {
