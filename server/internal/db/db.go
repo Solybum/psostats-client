@@ -20,21 +20,22 @@ import (
 )
 
 const (
-	GamesByIdTable           = "psostats_games_by_id"
-	QuestRecordsTable        = "psostats_quest_records"
-	AnnivStats               = "psostats_anniv_stats"
-	AnnivRecordHistory       = "psostats_anniv_record_history"
-	Anniv2021RecordsTable    = "psostats_records_anniv_2021"
-	RecentGamesByPlayerTable = "psostats_recent_games_by_player_2"
-	RecentGamesByMonth       = "psostats_recent_games_by_month_2"
-	GameCountTable           = "psostats_games_counter"
-	gameCountPrimaryKey      = "psostats_game_count"
-	PlayerPbTable            = "psostats_player_pb"
-	PlayerClassCount         = "psostats_player_class_count"
-	PlayerQuestCount         = "psostats_player_quest_count"
-	OverallQuestCount        = "psostats_overall_quest_count"
-	QuestSeriesPbTable       = "psostats_quest_series_pb"
-	QuestDataFramesTable     = "psostats_quest_data_frames"
+	GamesByIdTable              = "psostats_games_by_id"
+	QuestRecordsTable           = "psostats_quest_records"
+	AnnivStats                  = "psostats_anniv_stats"
+	AnnivRecordHistory          = "psostats_anniv_record_history"
+	Anniv2021RecordsTable       = "psostats_records_anniv_2021"
+	RecentGamesByPlayerTableOld = "psostats_recent_games_by_player"
+	RecentGamesByPlayerTable    = "psostats_recent_games_by_player_2"
+	RecentGamesByMonth          = "psostats_recent_games_by_month_2"
+	GameCountTable              = "psostats_games_counter"
+	gameCountPrimaryKey         = "psostats_game_count"
+	PlayerPbTable               = "psostats_player_pb"
+	PlayerClassCount            = "psostats_player_class_count"
+	PlayerQuestCount            = "psostats_player_quest_count"
+	OverallQuestCount           = "psostats_overall_quest_count"
+	QuestSeriesPbTable          = "psostats_quest_series_pb"
+	QuestDataFramesTable        = "psostats_quest_data_frames"
 )
 
 type PsoStatsDb struct {
@@ -500,7 +501,7 @@ func GetPlayerRecentGamesOld(player string, dynamoClient *dynamodb.DynamoDB) ([]
 		ExpressionAttributeValues: requestExpression.Values(),
 		KeyConditionExpression:    requestExpression.KeyCondition(),
 		ScanIndexForward:          aws.Bool(false),
-		TableName:                 aws.String("recent_games_by_player"),
+		TableName:                 aws.String(RecentGamesByPlayerTableOld),
 	})
 	if err != nil {
 		return nil, err
