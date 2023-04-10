@@ -20,21 +20,21 @@ import (
 )
 
 const (
-	GamesByIdTable           = "games_by_id"
-	QuestRecordsTable        = "quest_records"
-	AnnivStats               = "anniv_stats"
-	AnnivRecordHistory       = "anniv_record_history"
-	Anniv2021RecordsTable    = "records_anniv_2021"
-	RecentGamesByPlayerTable = "recent_games_by_player_2"
-	RecentGamesByMonth       = "recent_games_by_month_2"
-	GameCountTable           = "games_counter"
-	gameCountPrimaryKey      = "game_count"
-	PlayerPbTable            = "player_pb"
-	PlayerClassCount         = "player_class_count"
-	PlayerQuestCount         = "player_quest_count"
-	OverallQuestCount        = "overall_quest_count"
-	QuestSeriesPbTable       = "quest_series_pb"
-	QuestDataFramesTable     = "quest_data_frames"
+	GamesByIdTable           = "psostats_games_by_id"
+	QuestRecordsTable        = "psostats_quest_records"
+	AnnivStats               = "psostats_anniv_stats"
+	AnnivRecordHistory       = "psostats_anniv_record_history"
+	Anniv2021RecordsTable    = "psostats_records_anniv_2021"
+	RecentGamesByPlayerTable = "psostats_recent_games_by_player_2"
+	RecentGamesByMonth       = "psostats_recent_games_by_month_2"
+	GameCountTable           = "psostats_games_counter"
+	gameCountPrimaryKey      = "psostats_game_count"
+	PlayerPbTable            = "psostats_player_pb"
+	PlayerClassCount         = "psostats_player_class_count"
+	PlayerQuestCount         = "psostats_player_quest_count"
+	OverallQuestCount        = "psostats_overall_quest_count"
+	QuestSeriesPbTable       = "psostats_quest_series_pb"
+	QuestDataFramesTable     = "psostats_quest_data_frames"
 )
 
 type PsoStatsDb struct {
