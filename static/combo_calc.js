@@ -876,8 +876,10 @@ const classStats = {
 };
 const frames = {
     NONE: {atp: 0, ata: 0},
+    SONICTEAM: {atp: 0, ata: 0},
     THIRTEEN: {atp: 0, ata: 0},
     D_PARTS101: {atp: 35, ata: 0},
+    Sue: {atp: 100, ata: 0},
     SAMURAI: {atp: 0, ata: 0},
     CRIMSON_COAT: {atp: 0, ata: 0},
     SWEETHEART1: {atp: 0, ata: 0},
