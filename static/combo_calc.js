@@ -41,6 +41,24 @@ const weapons = {
         grind: 0,
         special: "Berserk"
     },
+    "Hundred Souls": {
+        name: "Hundred Souls",
+        animation: "Saber",
+        minAtp: 1000,
+        maxAtp: 1200,
+        ata: 50,
+        grind: 0,
+        special: "Spirit"
+    },
+    "Blood Sword": {
+        name: "Blood Sword",
+        animation: "Saber",
+        minAtp: 1000,
+        maxAtp: 1000,
+        ata: 70,
+        grind: 0,
+        special: "Spirit"
+    },
     "Galatine": {name: "Galatine", animation: "Saber", minAtp: 990, maxAtp: 1260, ata: 77, grind: 9, special: "Spirit"},
     "ES Saber": {
         name: "ES Saber", animation: "Saber", minAtp: 150, maxAtp: 150, ata: 50, grind: 250, maxHit: 0, maxAttr: 0,
@@ -101,18 +119,18 @@ const weapons = {
     "Dark Flow": {
         name: "Dark Flow",
         animation: "Sword",
-        minAtp: 756,
-        maxAtp: 900,
+        minAtp: 1000,
+        maxAtp: 1100,
         ata: 50,
         grind: 0,
         special: "Dark Flow",
-        combo: {"attack1": "SPECIAL", "attack1Hits": 5, "attack2": "NONE", "attack3": "NONE"}
+        combo: {"attack1": "SPECIAL", "attack1Hits": 5, "attack2": "SPECIAL", "attack2hits": 5, "attack3": "SPECIAL", "attack3hits": 5}
     },
     "Tsumikiri J-Sword": {
         name: "Tsumikiri J-Sword",
         animation: "Sword",
-        minAtp: 700,
-        maxAtp: 756,
+        minAtp: 900,
+        maxAtp: 950,
         ata: 40,
         grind: 50,
         special: "TJS"
@@ -527,6 +545,16 @@ const weapons = {
         maxHit: 0,
         combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
     },
+    "Serene Swan": {
+        name: "Serene Swan",
+        animation: "Handgun",
+        minAtp: 80,
+        maxAtp: 90,
+        ata: 32,
+        grind: 9,
+        maxHit: 0,
+        combo: {"attack1Hits": 4, "attack2Hits": 4, "attack3Hits": 4}
+    },
     "Heaven Striker": {
         name: "Heaven Striker",
         animation: "Handgun",
@@ -679,8 +707,8 @@ const weapons = {
         name: "Dual Bird",
         animation: "Mechgun",
         minAtp: 200,
-        maxAtp: 210,
-        ata: 22,
+        maxAtp: 222,
+        ata: 45,
         grind: 21,
         maxHit: 0,
         combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
@@ -738,7 +766,7 @@ const weapons = {
         minAtp: 360,
         maxAtp: 450,
         ata: 45,
-        grind: 0, maxHit: 0,
+        grind: 50, maxHit: 0,
 
         combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2}, special: "Chaos"
     },
@@ -754,11 +782,10 @@ const weapons = {
     "Dark Meteor": {
         name: "Dark Meteor",
         animation: "Shot",
-        minAtp: 150,
-        maxAtp: 280,
+        minAtp: 750,
+        maxAtp: 880,
         ata: 45,
         grind: 25,
-        combo: {"attack2": "NONE", "attack3": "NONE"}, special: "Dark Flow"
     },
     "TypeSH/Shot": {name: "TypeSH/Shot", animation: "Shot", minAtp: 10, maxAtp: 10, ata: 40, grind: 60},
     "ES Shot": {

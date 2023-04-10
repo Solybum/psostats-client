@@ -2,10 +2,11 @@ package pso
 
 import (
 	"fmt"
-	"github.com/phelix-/psostats/v2/pkg/model"
 	"log"
 	"syscall"
 	"time"
+
+	"github.com/phelix-/psostats/v2/pkg/model"
 
 	"github.com/phelix-/psostats/v2/client/internal/pso/inventory"
 	"github.com/phelix-/psostats/v2/client/internal/pso/quest"
@@ -17,8 +18,9 @@ import (
 )
 
 const (
-	unseenWindowName             = "PHANTASY STAR ONLINE Blue Burst"
-	ephineaWindowName            = "Ephinea: Phantasy Star Online Blue Burst"
+	unseenWindowName             = ""
+	ephineaWindowName            = ""
+	ultimaWindowName             = "Phantasy Star Online: Blue Burst"
 	persistentConnectionTickRate = time.Second / 30
 	windowsCodeStillActive       = 259
 )
@@ -157,7 +159,7 @@ func (pso *PSO) StopPersistentConnection() {
 
 func (pso *PSO) Connect() (bool, string, error) {
 	server := constants.UnseenServerName
-	hwnd := w32.FindWindowW(nil, syscall.StringToUTF16Ptr(unseenWindowName))
+	hwnd := w32.FindWindowW(nil, syscall.StringToUTF16Ptr(ultimaWindowName))
 	if hwnd == 0 {
 		server = constants.EphineaServerName
 		// unseen not found
