@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	PlayersTable    = "players"
+	PlayersTable    = "psostats_players"
 )
 
 type User struct {
