@@ -132,7 +132,7 @@ func CreateGamesById(dynamoClient *dynamodb.DynamoDB) error {
 	createTableInput := dynamodb.CreateTableInput{
 		AttributeDefinitions:  []*dynamodb.AttributeDefinition{&attributeDefinition},
 		KeySchema:             []*dynamodb.KeySchemaElement{&keySchemaElement},
-		TableName:             aws.String("games_by_id"),
+		TableName:             aws.String(db.GamesByIdTable),
 		ProvisionedThroughput: &provisionedThroughput,
 	}
 	_, err := dynamoClient.CreateTable(&createTableInput)
@@ -155,7 +155,7 @@ func CreateGamesCounter(dynamoClient *dynamodb.DynamoDB) error {
 	createTableInput := dynamodb.CreateTableInput{
 		AttributeDefinitions:  []*dynamodb.AttributeDefinition{&attributeDefinition},
 		KeySchema:             []*dynamodb.KeySchemaElement{&keySchemaElement},
-		TableName:             aws.String("games_counter"),
+		TableName:             aws.String(db.GameCountTable),
 		ProvisionedThroughput: &provisionedThroughput,
 	}
 	_, err := dynamoClient.CreateTable(&createTableInput)
