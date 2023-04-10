@@ -105,7 +105,7 @@ func (s *Server) Run() {
 
 	// UI
 	s.app.Get("/", s.Index)
-	s.app.Get("/gamev4/:gameId/:gem?", s.GamePageV4)
+	s.app.Get("/game/:gameId/:gem?", s.GamePageV4)
 	s.app.Get("/gamev3/:gameId/:gem?", s.GamePageV3)
 	s.app.Get("/gamev4/:gameId/:gem?", s.GamePageV4)
 	s.app.Get("/info", s.InfoPage)
