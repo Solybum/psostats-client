@@ -19,6 +19,7 @@ type User struct {
 type UserDb interface {
 	GetUser(userName string) (*User, error)
 	CreateUser(user User) error
+	UpdateUser(user User) error
 }
 
 type DynamoUserDb struct {
@@ -57,6 +58,29 @@ func (d DynamoUserDb) CreateUser(user User) error {
 		TableName: aws.String(PlayersTable),
 	}
 	_, err = d.dynamoClient.PutItem(userInput)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (d DynamoUserDb) UpdateUser(user User) error {
+	key := make(map[string]*dynamodb.AttributeValue)
+	idAttribute := dynamodb.AttributeValue{S: aws.String(user.Id)}
+	key["Id"] = &idAttribute
+
+	password := dynamodb.AttributeValue{S: aws.String(user.Password)}
+	update := dynamodb.AttributeValueUpdate{
+		Action: aws.String(dynamodb.AttributeActionPut),
+		Value:  &password,
+	}
+	input := &dynamodb.UpdateItemInput{
+		TableName:	aws.String(PlayersTable),
+		Key:		key,
+		AttributeUpdates: map[string]*dynamodb.AttributeValueUpdate{"Password": &update},
+	}
+	_, err := d.dynamoClient.UpdateItem(input)
 	if err != nil {
 		return err
 	}

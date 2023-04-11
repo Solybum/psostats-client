@@ -125,6 +125,8 @@ func (s *Server) Run() {
 	s.app.Get("/api/record-splits/:quest", s.GetRecordSplits)
 	s.app.Get("/api/pb-splits/:quest", s.GetPbSplits)
 	s.app.Post("/api/motd", s.PostMotd)
+	s.app.Post("/api/users", s.PostCreateUser)
+	s.app.Post("/api/users/change-password", s.PostChangePassword)
 	s.indexTemplate = ensureParsed("./server/internal/templates/index.gohtml")
 	s.infoTemplate = ensureParsed("./server/internal/templates/info.gohtml")
 	s.playerTemplate = ensureParsed("./server/internal/templates/playerV2.gohtml")
@@ -811,6 +813,91 @@ func (s *Server) PostMotd(c *fiber.Ctx) error {
 	}
 	c.Response().AppendBody(jsonBytes)
 	c.Response().Header.Set("Content-Type", "application/json")
+	return nil
+}
+
+func (s *Server) PostCreateUser(c *fiber.Ctx) error {
+	authorized, user := s.verifyAuth(&c.Request().Header)
+	if !authorized {
+		c.Status(401)
+		return nil
+	}
+
+	adminUser, err := s.userDb.GetUser(user)
+	if (err != nil) {
+		return err
+	}
+
+	if (adminUser.Admin != true) {
+		c.Status(403)
+		return nil
+	}
+
+	var newUser userdb.User
+	if err := c.BodyParser(&newUser); err != nil {
+		c.Status(422)
+		return err
+	}
+
+	newUser.Id = strings.ToLower(newUser.Id)
+
+	existingUser, err := s.userDb.GetUser(newUser.Id)
+	if (err != nil) {
+		return err
+	}
+	if (existingUser != nil) {
+		c.Status(409)
+		return err
+	}
+
+	newUser.Password = HashPassword(newUser.Password)
+
+	s.userDb.CreateUser(newUser)
+
+	c.Status(200)
+	return nil
+}
+
+
+func (s *Server) PostChangePassword(c *fiber.Ctx) error {
+	authorized, user := s.verifyAuth(&c.Request().Header)
+	if !authorized {
+		c.Status(401)
+		return nil
+	}
+
+	adminUser, err := s.userDb.GetUser(user);
+	if (err != nil) {
+		return err
+	}
+
+	if (adminUser.Admin != true) {
+		c.Status(403)
+		return nil
+	}
+
+	var userInfo userdb.User
+	if err := c.BodyParser(&userInfo); err != nil {
+		c.Status(422)
+		return err
+	}
+
+	userInfo.Id = strings.ToLower(userInfo.Id)
+
+	existingUser, err := s.userDb.GetUser(userInfo.Id)
+	if (err != nil) {
+		return err
+	}
+	if (existingUser == nil) {
+		c.Status(404)
+		return err
+	}
+
+	existingUser.Password = HashPassword(userInfo.Password)
+
+	s.userDb.UpdateUser(*existingUser)
+
+	c.Status(200)
 	return nil
 }
 
