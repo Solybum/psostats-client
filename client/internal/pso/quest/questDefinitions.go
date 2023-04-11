@@ -197,6 +197,9 @@ func getAllQuests() []Quest {
 		{Episode: 1, Name: "Towards the Future", Number: 118, Start: register(12), End: register(254)},
 		{Episode: 1, Name: "Tyrell's Ego", Number: 161, Start: register(4), End: register(101)},
 		{Episode: 1, Name: "総督の贈り物", Start: floorSwitch(6, 165), End: floorSwitch(6, 33)},
+		{Episode: 1, Name: "Int. Defense Systems", Number: 1200, Start: warpIn(), End: register(18)},
+		{Episode: 1, Name: "Harmony of Despair I", Number: 1201, Start: warpIn(), End: register(150)},
+		{Episode: 1, Name: "Harmony of Despair II", Number: 1202, Start: register(48), End: register(255)},
 		// Labyrinthine Trial
 		// Sugoroku
 		// Sim 2.0
