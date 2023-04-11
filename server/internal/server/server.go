@@ -3,12 +3,6 @@ package server
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/phelix-/psostats/v2/pkg/common"
-	"github.com/phelix-/psostats/v2/pkg/psoclasses"
-	"github.com/phelix-/psostats/v2/server/internal/db"
-	"github.com/phelix-/psostats/v2/server/internal/enemies"
-	"github.com/phelix-/psostats/v2/server/internal/userdb"
-	"github.com/phelix-/psostats/v2/server/internal/weapons"
 	"log"
 	"net/http"
 	"net/url"
@@ -19,6 +13,13 @@ import (
 	"sync"
 	"text/template"
 	"time"
+
+	"github.com/phelix-/psostats/v2/pkg/common"
+	"github.com/phelix-/psostats/v2/pkg/psoclasses"
+	"github.com/phelix-/psostats/v2/server/internal/db"
+	"github.com/phelix-/psostats/v2/server/internal/enemies"
+	"github.com/phelix-/psostats/v2/server/internal/userdb"
+	"github.com/phelix-/psostats/v2/server/internal/weapons"
 
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/gofiber/fiber/v2"
@@ -104,7 +105,7 @@ func (s *Server) Run() {
 
 	// UI
 	s.app.Get("/", s.Index)
-	s.app.Get("/game/:gameId/:gem?", s.GamePage)
+	s.app.Get("/game/:gameId/:gem?", s.GamePageV4)
 	s.app.Get("/gamev3/:gameId/:gem?", s.GamePageV3)
 	s.app.Get("/gamev4/:gameId/:gem?", s.GamePageV4)
 	s.app.Get("/info", s.InfoPage)

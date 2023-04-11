@@ -18,8 +18,6 @@ import (
 )
 
 const (
-	unseenWindowName             = ""
-	ephineaWindowName            = ""
 	ultimaWindowName             = "Phantasy Star Online: Blue Burst"
 	persistentConnectionTickRate = time.Second / 30
 	windowsCodeStillActive       = 259
@@ -161,12 +159,8 @@ func (pso *PSO) Connect() (bool, string, error) {
 	server := constants.UnseenServerName
 	hwnd := w32.FindWindowW(nil, syscall.StringToUTF16Ptr(ultimaWindowName))
 	if hwnd == 0 {
-		server = constants.EphineaServerName
-		// unseen not found
-		hwnd = w32.FindWindowW(nil, syscall.StringToUTF16Ptr(ephineaWindowName))
-		if hwnd == 0 {
-			return false, "Window not found", nil
-		}
+		server = constants.UltimaServerName
+		return false, "Window not found", nil
 	}
 
 	_, pid := w32.GetWindowThreadProcessId(hwnd)
