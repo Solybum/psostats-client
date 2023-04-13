@@ -801,7 +801,7 @@ func (s *Server) PostMotd(c *fiber.Ctx) error {
 	}
 	message := fmt.Sprintf("Logged in as %v, up to date", user)
 	if getClientVersionInt(clientInfo) < 10800 {
-		message = "Update available: location bugfixes. https://psostats.com/download"
+		message = "Update available: location bugfixes. https://psostats.4waypb.com/download"
 	}
 	motd := model.MessageOfTheDay{
 		Authorized: authorized,
