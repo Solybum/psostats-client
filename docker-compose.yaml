@@ -11,6 +11,7 @@ services:
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
       AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+      WEBHOOK_URL: ${WEBHOOK_URL}
     volumes:
       - ".:/app"
       - /dev/null:/app/.env
