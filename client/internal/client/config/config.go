@@ -40,7 +40,7 @@ func (config *Config) GetServerBaseUrl() string {
 	if config.ServerBaseUrl != nil {
 		return *config.ServerBaseUrl
 	} else {
-		return "https://psostats.com"
+		return "https://psostats.4waypb.com"
 	}
 }
 
