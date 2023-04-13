@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="col-3">
                                     {{ if lt (len (index $game.Players 0).Name) 1}}
-                                        <a href="/game/{{ $game.Id }}" class="quest-time">{{ $game.Time}}</a>
+                                        <a href="/gamev4/{{ $game.Id }}" class="quest-time">{{ $game.Time}}</a>
                                     {{ else }}
                                         <span class="quest-time">{{ $game.Time }}</span>
                                     {{ end }}
@@ -68,7 +68,7 @@
                                         {{ if gt (len .Name) 0 }}
                                             <div>
                                             {{ if $player.HasPov}}
-                                                <a href="/game/{{ $game.Id }}/{{ $index }}"><span style="width:85px; display: inline-block">{{ index $player.Class }}</span>{{ $player.Name }}</a>
+                                                <a href="/gamev4/{{ $game.Id }}/{{ $index }}"><span style="width:85px; display: inline-block">{{ index $player.Class }}</span>{{ $player.Name }}</a>
                                             {{ else }}
                                                 <span style="width:85px; display: inline-block">{{ index .Class }}</span>{{ .Name }}
                                             {{ end }}
