@@ -144,8 +144,8 @@ func GetEnemiesUltMulti() []Enemy {
 		{Name: "Recobox", Type: "Machine", Hp: 4160, Atp: 0, Dfp: 935, Mst: 0, Ata: 200, Evp: 300, Lck: 77, Efr: 90, Eic: 60, Eth: 75, Edk: 69, Elt: 90, Esp: 30, Xp: 444, Location: "Seabed"},
 		{Name: "Recon", Type: "Machine", Hp: 2432, Atp: 2100, Dfp: 730, Mst: 0, Ata: 311, Evp: 580, Lck: 95, Efr: 60, Eic: 80, Eth: 80, Edk: 75, Elt: 80, Esp: 30, Xp: 260, Location: "Seabed"},
 		{Name: "Delbiter", Type: "Dark", Hp: 8318, Atp: 3680, Dfp: 974, Mst: 0, Ata: 355, Evp: 860, Lck: 55, Efr: 65, Eic: 75, Eth: 90, Edk: 92, Elt: 90, Esp: 90, Xp: 663, Location: "Seabed"},
-		{Name: "Olga Flow (Form 1)", Type: "Dark", Hp: 23000, Atp: 3230, Dfp: 890, Mst: 0, Ata: 643, Evp: 780, Lck: 25, Efr: 87, Eic: 70, Eth: 95, Edk: 1000, Elt: 90, Esp: 100, Xp: 0, Location: "Seabed"},
-		{Name: "Olga Flow (Form 2)", Type: "Dark", Hp: 27000, Atp: 4200, Dfp: 1000, Mst: 0, Ata: 555, Evp: 690, Lck: 75, Efr: 98, Eic: 98, Eth: 98, Edk: 98, Elt: 79, Esp: 100, Xp: 61750, Location: "Seabed"},
+		{Name: "Olga Flow (Form 1)", Type: "Dark", Hp: 32767, Atp: 4200, Dfp: 1200, Mst: 0, Ata: 700, Evp: 800, Lck: 25, Efr: 87, Eic: 70, Eth: 95, Edk: 1000, Elt: 90, Esp: 150, Xp: 0, Location: "Seabed"},
+		{Name: "Olga Flow (Form 2)", Type: "Dark", Hp: 32767, Atp: 7900, Dfp: 2000, Mst: 0, Ata: 870, Evp: 1250, Lck: 129, Efr: 198, Eic: 198, Eth: 198, Edk: 198, Elt: 179, Esp: 500, Xp: 61750, Location: "Seabed"},
 		//{Name: "Gael", Type: "Dark", Hp: 490, Atp: 0, Dfp: 180, Mst: 0, Ata: 0, Evp: 10, Lck: 50, Efr: 50, Eic: 80, Eth: 80, Edk: 100, Elt: 100, Esp: 100, Xp: 0, Location: "Seabed"},
 		//{Name: "Giel", Type: "Dark", Hp: 1890, Atp: 0, Dfp: 1200, Mst: 0, Ata: 0, Evp: 270, Lck: 90, Efr: 70, Eic: 95, Eth: 95, Edk: 95, Elt: 95, Esp: 100, Xp: 0, Location: "Seabed"},
 
