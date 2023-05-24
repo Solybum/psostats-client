@@ -87,6 +87,15 @@ const weapons = {
         ata: 34,
         grind: 85, special: "Spirit"
     },
+    "Sil Dragon Slayer": {
+        name: "Sil Dragon Slayer",
+        animation: "Sword",
+        minAtp: 600,
+        maxAtp: 650,
+        ata: 70,
+        grind: 35,
+        special: "Blizzard"
+    },
     "Red Sword": {
         name: "Red Sword",
         animation: "Sword",
@@ -94,6 +103,15 @@ const weapons = {
         maxAtp: 611,
         ata: 37,
         grind: 52,
+        special: "Arrest"
+    },
+    "Crimson Sword": {
+        name: "Crimson Sword",
+        animation: "Sword",
+        minAtp: 620,
+        maxAtp: 800,
+        ata: 80,
+        grind: 55,
         special: "Arrest"
     },
     "Chain Sawd": {
@@ -134,6 +152,24 @@ const weapons = {
         ata: 40,
         grind: 50,
         special: "TJS"
+    },
+    "Master Sword": {
+        name: "Master Sword",
+        animation: "Sword",
+        minAtp: 700,
+        maxAtp: 780,
+        ata: 35,
+        grind: 70,
+        special: "TJS"
+    },
+    "Stealth Sword": {
+        name: "Stealth Sword",
+        animation: "Sword",
+        minAtp: 300,
+        maxAtp: 350,
+        ata: 50,
+        grind: 0,
+        special: "Demon's"
     },
     "TypeSW/J-Sword": {
         name: "TypeSW/J-Sword",
@@ -207,7 +243,7 @@ const weapons = {
         maxAtp: 220,
         ata: 35,
         grind: 15,
-        maxHit: 50,
+        maxHit: 80,
         combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2}, special: "None"
     },
     "Zero Divide": {
@@ -228,7 +264,7 @@ const weapons = {
         maxAtp: 270,
         ata: 34,
         grind: 25,
-        maxHit: 50,
+        maxHit: 80,
         combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2}
     },
     "Red Dagger": {
@@ -247,7 +283,18 @@ const weapons = {
         maxAtp: 350,
         ata: 39,
         grind: 15,
-        maxHit: 50,
+        maxHit: 80,
+        combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2},
+        special: "None"
+    },
+    "Macho Blades": {
+        name: "Macho Blades",
+        animation: "Dagger",
+        minAtp: 400,
+        maxAtp: 400,
+        ata: 50,
+        grind: 25,
+        maxHit: 80,
         combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2},
         special: "None"
     },
@@ -258,7 +305,7 @@ const weapons = {
         maxAtp: 650,
         ata: 50,
         grind: 0,
-        maxHit: 0,
+        maxHit: 100,
         combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2},
         special: "None"
     },
@@ -281,6 +328,24 @@ const weapons = {
         grind: 25,
         combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2}, special: "Berserk"
     },
+    "Blood Tornado": {
+        name: "Blood Tornado",
+        animation: "Dagger",
+        minAtp: 550,
+        maxAtp: 600,
+        ata: 70,
+        grind: 33,
+        combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2}, special: "Demon's"
+    },
+    "Fury of the Beast": {
+        name: "Fury of the Beast",
+        animation: "Dagger",
+        minAtp: 500,
+        maxAtp: 600,
+        ata: 65,
+        grind: 25,
+        combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2}, special: "Charge"
+    },
     "ES Blade": {
         name: "ES Blade",
         animation: "Dagger",
@@ -295,6 +360,7 @@ const weapons = {
     "Gungnir": {name: "Gungnir", animation: "Partisan", minAtp: 150, maxAtp: 180, ata: 32, grind: 10},
     "Vjaya": {name: "Vjaya", animation: "Partisan", minAtp: 160, maxAtp: 220, ata: 36, grind: 15, special: "Vjaya"},
     "Tyrell's Parasol": {name: "Tyrell's Parasol", animation: "Partisan", minAtp: 250, maxAtp: 300, ata: 40, grind: 0},
+    "Rico's Parasol": {name: "Rico's Parasol", animation: "Partisan", minAtp: 250, maxAtp: 300, ata: 40, grind: 0},
     "Madam's Umbrella": {
         name: "Madam's Umbrella",
         animation: "Partisan",
@@ -328,6 +394,33 @@ const weapons = {
     "ES Scythe": {
         name: "ES Scythe", animation: "Partisan", minAtp: 10, maxAtp: 10, ata: 40, grind: 180, maxHit: 0, maxAttr: 0,
     },
+    "Great Fairy Sword": {
+        name: "Great Fairy Sword",
+        animation: "Partisan",
+        minAtp: 150,
+        maxAtp: 150,
+        ata: 40,
+        grind: 99,
+        special: "Charge"
+    },
+    "Sword of Ultima": {
+        name: "Sword of Ultima",
+        animation: "Partisan",
+        minAtp: 300,
+        maxAtp: 350,
+        ata: 15,
+        grind: 55,
+        special: "Charge"
+    },
+    "Ultima Reaper": {
+        name: "Ultima Reaper",
+        animation: "Partisan",
+        minAtp: 666,
+        maxAtp: 666,
+        ata: 45,
+        grind: 15,
+        special: "Hell"
+    },
 
     "Diska": {name: "Diska", animation: "Slicer", minAtp: 85, maxAtp: 105, ata: 25, grind: 10},
     "Diska of Braveman": {
@@ -356,6 +449,33 @@ const weapons = {
     "ES J-Cutter": {
         name: "ES J-Cutter", animation: "Slicer", minAtp: 25, maxAtp: 25, ata: 35, grind: 150, maxHit: 0, maxAttr: 0,
     },
+    "Boomerang": {
+        name: "Boomerang",
+        animation: "Slicer",
+        minAtp: 200,
+        maxAtp: 200,
+        ata: 30,
+        grind: 0,
+        special: "Arrest"
+    },
+    "Kiss of Death": {
+        name: "Kiss of Death",
+        animation: "Slicer",
+        minAtp: 350,
+        maxAtp: 350,
+        ata: 35,
+        grind: 0,
+        special: "Hell"
+    },
+    "Slicer of Vengeance": {
+        name: "Slicer of Vengeance",
+        animation: "Slicer",
+        minAtp: 470,
+        maxAtp: 525,
+        ata: 30,
+        grind: 0,
+        special: "Charge"
+    },
 
     "Demolition Comet": {
         name: "Demolition Comet",
@@ -373,7 +493,17 @@ const weapons = {
         maxAtp: 550,
         ata: 50,
         grind: 0,
-        maxHit: 0,
+        maxHit: 100,
+        combo: {"attack1Hits": 2, "attack2Hits": 1, "attack3Hits": 3}, special: "Lavis Cannon"
+    },
+    "Inferno Girasole": {
+        name: "Inferno Girasole",
+        animation: "Double Saber",
+        minAtp: 700,
+        maxAtp: 820,
+        ata: 50,
+        grind: 20,
+        maxHit: 100,
         combo: {"attack1Hits": 2, "attack2Hits": 1, "attack3Hits": 3}, special: "Lavis Cannon"
     },
     "Twin Blaze": {
@@ -523,8 +653,36 @@ const weapons = {
 
         combo: {"attack1Hits": 1, "attack2Hits": 2, "attack3Hits": 2}
     },
-
+    "Ten Years Blades": {
+        name: "Ten Years Blades",
+        animation: "Twin Sword",
+        minAtp: 600,
+        maxAtp: 650,
+        ata: 74,
+        grind: 200,
+        combo: {"attack1Hits": 1, "attack2Hits": 2, "attack3Hits": 2}, 
+        special: "Charge"
+    },
+    "Tyrfing": {
+        name: "Tyrfing",
+        animation: "Twin Sword",
+        minAtp: 700,
+        maxAtp: 740,
+        ata: 80,
+        grind: 13,
+        combo: {"attack1Hits": 1, "attack2Hits": 2, "attack3Hits": 2}, 
+        special: "Geist"
+    },
     "Raygun": {name: "Raygun", animation: "Handgun", minAtp: 150, maxAtp: 180, ata: 35, grind: 15},
+    "Suppressed Gun": {
+        name: "Suppressed Gun",
+        animation: "Handgun",
+        minAtp: 260,
+        maxAtp: 270,
+        ata: 47,
+        grind: 9,
+        special: "Berserk"
+    },
     "Master Raven": {
         name: "Master Raven",
         animation: "Master Raven",
@@ -564,9 +722,45 @@ const weapons = {
         grind: 20,
         special: "Berserk"
     },
+    "Asteron Striker": {
+        name: "Asteron Striker",
+        animation: "Handgun",
+        minAtp: 300,
+        maxAtp: 380,
+        ata: 60,
+        grind: 0,
+        special: "Hell"
+    },
+    "Hand of Justice": {
+        name: "Hand of Justice",
+        animation: "Handgun",
+        minAtp: 400,
+        maxAtp: 400,
+        ata: 65,
+        grind: 25,
+        special: "Demon's"
+    },
+    "Morolian Blaster": {
+        name: "Morolian Blaster",
+        animation: "Handgun",
+        minAtp: 280,
+        maxAtp: 310,
+        ata: 60,
+        grind: 0,
+        special: "Arrest"
+    },
 
     "Laser": {name: "Laser", animation: "Rifle", minAtp: 200, maxAtp: 210, ata: 50, grind: 25},
     "Spread Needle": {name: "Spread Needle", animation: "Rifle", minAtp: 1, maxAtp: 110, ata: 40, grind: 40, special: "Seize"},
+    "Arrest Needle": {
+        name: "Arrest Needle",
+        animation: "Rifle",
+        minAtp: 300,
+        maxAtp: 400,
+        ata: 75,
+        grind: 60,
+        special: "Arrest",
+    },
     "Bringer's Rifle": {
         name: "Bringer's Rifle",
         animation: "Rifle",
@@ -575,7 +769,7 @@ const weapons = {
         ata: 63,
         grind: 9,
         special: "Demon's",
-        maxHit: 50
+        maxHit: 100
     },
     "Frozen Shooter": {name: "Frozen Shooter", animation: "Rifle", minAtp: 240, maxAtp: 250, ata: 60, grind: 9, special: "Dark Flow"},
     "Snow Queen": {
@@ -593,6 +787,41 @@ const weapons = {
     },
     "ES Needle": {
         name: "ES Needle", animation: "Rifle", minAtp: 10, maxAtp: 10, ata: 40, grind: 70, maxHit: 0, maxAttr: 0,
+    },
+    "Egg Blaster MK2": {
+        name: "Egg Blaster MK2",
+        animation: "Rifle",
+        minAtp: 300,
+        maxAtp: 330,
+        ata: 50,
+        grind: 10,
+        special: "Berserk",
+    },
+    "Lindcray": {
+        name: "Lindcray",
+        animation: "Rifle",
+        minAtp: 800,
+        maxAtp: 1200,
+        ata: 75,
+        grind: 0,
+        special: "Spirit",
+    },
+    "Sacred Bow": {
+        name: "Sacred Bow",
+        animation: "Rifle",
+        minAtp: 1000,
+        maxAtp: 1400,
+        ata: 70,
+        grind: 0,
+        special: "Hell",
+    },
+    "Water Gun": {
+        name: "Water Gun",
+        animation: "Rifle",
+        minAtp: 50,
+        maxAtp: 50,
+        ata: 50,
+        grind: 0,
     },
 
     "Mechgun": {
@@ -685,6 +914,15 @@ const weapons = {
         grind: 9,
         combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
     },
+    "Rage de Glace": {
+        name: "Rage de Glace",
+        animation: "Mechgun",
+        minAtp: 200,
+        maxAtp: 232,
+        ata: 85,
+        grind: 9,
+        combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
+    },
     "Guld Milla": {
         name: "Guld Milla",
         animation: "Mechgun",
@@ -703,14 +941,44 @@ const weapons = {
         grind: 12,
         combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
     },
+    "Mille Fauciles": {
+        name: "Mille Fauciles",
+        animation: "Mechgun",
+        minAtp: 50,
+        maxAtp: 50,
+        ata: 65,
+        grind: 250,
+        combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
+    },
     "Dual Bird": {
         name: "Dual Bird",
         animation: "Mechgun",
         minAtp: 200,
         maxAtp: 222,
         ata: 45,
-        grind: 21,
-        maxHit: 0,
+        grind: 50,
+        maxHit: 100,
+        combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
+    },
+    "Psycho Raven": {
+        name: "Psycho Raven",
+        animation: "Mechgun",
+        minAtp: 480,
+        maxAtp: 480,
+        ata: 45,
+        grind: 80,
+        maxHit: 100,
+        combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
+    },
+    "Samba Fiesta": {
+        name: "Samba Fiesta",
+        animation: "Mechgun",
+        minAtp: 5,
+        maxAtp: 10,
+        ata: 60,
+        grind: 80,
+        maxHit: 85,
+        special: "Demon's",
         combo: {"attack1Hits": 3, "attack2Hits": 3, "attack3Hits": 3}
     },
     "TypeME/Mechgun": {
@@ -766,7 +1034,7 @@ const weapons = {
         minAtp: 360,
         maxAtp: 450,
         ata: 45,
-        grind: 50, maxHit: 0,
+        grind: 50, maxHit: 100,
 
         combo: {"attack1Hits": 2, "attack2Hits": 2, "attack3Hits": 2}, special: "Chaos"
     },
@@ -794,6 +1062,24 @@ const weapons = {
     "ES Bazooka": {
         name: "ES Bazooka", animation: "Shot", minAtp: 10, maxAtp: 10, ata: 40, grind: 250, maxHit: 0, maxAttr: 0,
     },
+    "Crush Cannon": {
+        name: "Crush Cannon",
+        animation: "Shot",
+        minAtp: 100,
+        maxAtp: 200,
+        ata: 50,
+        grind: 25,
+        special: "Gush",
+    },
+    "Fire Rod": {
+        name: "Fire Rod",
+        animation: "Shot",
+        minAtp: 550,
+        maxAtp: 650,
+        ata: 50,
+        grind: 0,
+        special: "Spirit",
+    },
 
     "ES Launcher": {
         name: "ES Launcher",
@@ -807,6 +1093,16 @@ const weapons = {
         special: "Berserk"
     },
 
+    "Outlaw Star": {
+        name: "Outlaw Star",
+        animation: "Launcher",
+        minAtp: 240,
+        maxAtp: 270,
+        ata: 30,
+        grind: 0,
+        special: "Hell"
+    },
+
     "Cannon Rouge": {
         name: "Cannon Rouge",
         animation: "Launcher",
@@ -814,6 +1110,27 @@ const weapons = {
         maxAtp: 750,
         ata: 45,
         grind: 30,
+        combo: {"attack1Hits": 1, "attack2": "NONE", "attack3": "NONE"}
+    },
+
+    "Banana Cannon": {
+        name: "Banana Cannon",
+        animation: "Launcher",
+        minAtp: 450,
+        maxAtp: 550,
+        ata: 80,
+        grind: 50,
+        special: "Blizzard"
+    },
+
+    "Bomb-Chu": {
+        name: "Bomb-Chu",
+        animation: "Launcher",
+        minAtp: 300,
+        maxAtp: 450,
+        ata: 250,
+        grind: 0,
+        special: "Heat",
         combo: {"attack1Hits": 1, "attack2": "NONE", "attack3": "NONE"}
     },
 
